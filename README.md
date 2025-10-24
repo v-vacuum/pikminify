@@ -1,34 +1,36 @@
 # macos desktop icon changer
-
-change all your desktop icons to the existential blue pikmin and manage `Icon?` in your global gitignore.
+change all your desktop icons to the existential blue pikmin and manage `Icon?` in your global gitignore!
 
 ## setup
 
-clone the repository:
+run this to change just desktop folders:
 ```bash
-git clone https://github.com/yourusername/pikminify.git
-cd pikminify
+curl -fsSL https://raw.githubusercontent.com/v-vacuum/pikminify/main/install.sh | bash
+```
+and run this for all desktop icons:
+```bash
+curl -fsSL https://raw.githubusercontent.com/v-vacuum/pikminify/main/install.sh | bash -s -- -t all
 ```
 
-run the script:
-```bash
-bash icon-changer.sh
-```
+this downloads, runs, and cleans up automatically.
 
 ## usage
 
+the installer runs once and cleans up. to run again, use the same install command:
 ```bash
-# use default torturedpikmin.png in same directory
-bash icon-changer.sh
+curl -fsSL https://raw.githubusercontent.com/v-vacuum/pikminify/main/install.sh | bash
+```
+
+pass options to the installer:
+```bash
+# change all desktop items (not just folders)
+curl -fsSL https://raw.githubusercontent.com/v-vacuum/pikminify/main/install.sh | bash -s -- -t all
 
 # use custom image
-bash icon-changer.sh -i ~/Pictures/my-icon.png
-
-# change all desktop items (not just folders)
-bash icon-changer.sh -t all
+curl -fsSL https://raw.githubusercontent.com/v-vacuum/pikminify/main/install.sh | bash -s -- -i ~/Pictures/my-icon.png
 
 # skip gitignore modifications
-bash icon-changer.sh --no-gitignore
+curl -fsSL https://raw.githubusercontent.com/v-vacuum/pikminify/main/install.sh | bash -s -- --no-gitignore
 ```
 
 ## options
