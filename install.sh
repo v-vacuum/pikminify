@@ -48,5 +48,11 @@ echo ""
 bash "$INSTALL_DIR/icon-changer.sh" "$@"
 
 echo ""
-echo -e "${YELLOW}tip: files installed to $INSTALL_DIR${NC}"
-echo -e "${YELLOW}run again with: bash $INSTALL_DIR/icon-changer.sh${NC}"
+echo -e "${GREEN}cleaning up...${NC}"
+
+# Remove the installed files
+rm -rf "$INSTALL_DIR"
+
+echo -e "${GREEN}✓${NC} removed temporary files"
+echo ""
+echo -e "${YELLOW}to run again, use the same install command${NC}"
